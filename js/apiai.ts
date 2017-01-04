@@ -31,7 +31,7 @@ namespace ApiAi {
         }
     }
 
-    class AgentData {
+    export class AgentData {
         public language: String = "en";
         public enabledDomainFeatures: Array<Object> = [];
         public defaultTimezone: String = "Europe/London";
@@ -43,7 +43,7 @@ namespace ApiAi {
         }
     }
 
-    class InputText {
+    export class InputText {
         public text: String = "";
 
         constructor(data: Object) {
@@ -51,7 +51,7 @@ namespace ApiAi {
         }
     }
 
-    class UserSays {
+    export class UserSays {
         public data: Array<InputText> = [];
         public isTemplate: boolean = false;
         public count: Number = 0;
@@ -65,7 +65,7 @@ namespace ApiAi {
         }
     }
 
-    class ResponseContext {
+    export class ResponseContext {
         public name: String = "";
         public lifespan: Number = 5;
 
@@ -74,7 +74,7 @@ namespace ApiAi {
         }
     }
 
-    class Message {
+    export class Message {
         public type: Number = 0;
         public speech = "";
 
@@ -83,7 +83,7 @@ namespace ApiAi {
         }
     }
 
-    class Parameter {
+    export class Parameter {
         public required: boolean = false;
         public dataType: String = "";
         public name: String = "";
@@ -96,7 +96,7 @@ namespace ApiAi {
         }
     }
 
-    class Response {
+    export class Response {
         public resetContexts: boolean = false;
         public affectedContexts: Array<ResponseContext> = [];
         public parameters: Array<Parameter> = [];
@@ -118,7 +118,7 @@ namespace ApiAi {
         }
     }
 
-    class Intent {
+    export class Intent {
         public userSays: Array<UserSays> = [];
         public name: String = "";
         public auto: boolean = true;
